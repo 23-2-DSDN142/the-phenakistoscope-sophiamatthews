@@ -19,11 +19,25 @@ function setup_layers(pScope){
   var layer2 = new PLayer(squares);
   layer2.mode( RING );
   layer2.set_boundary( 0, 400 );
+
+  var layer2 = new PLayer(circle);
+  layer2.mode( RING );
+  layer2.set_boundary( 0, 400 );
+}
+
+function circle(x, y, animation, pScope){
+  
+  scale(animation.frame*2);
+
+beginShape();
+circle(30,20,0);
 }
 
 function heart(x, y, animation, pScope){
   
   scale(animation.frame*2);
+
+
 
   //left half of heart
 beginShape();
